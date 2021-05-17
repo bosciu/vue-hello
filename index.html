@@ -13,7 +13,7 @@
 
 <body>
     <div id="root">
-        <h1>{{message}}</h1>
+        <h1 :class="classColor">{{message}}</h1>
         <img :src="linkImage" alt="Paesaggio" />
         <div id="cambia-titolo">
             <label for="cambia-titolo">Cambia il titolo!</label>
@@ -23,7 +23,10 @@
             <label for="cambia-immagine">Cambia l'immagine!</label>
             <input name="cambia-immagine" type="text" v-model="linkImage" />
         </div>
-        <button class="btn btn-primary" @click="prova">
+        <button class="btn btn-danger" @click="cambiaColore">
+				Clicca qui per cambiare colore del titolo!
+			</button>
+        <button class="btn btn-primary" @click="saluta">
 				Clicca qui per un bel saluto!
 			</button>
     </div>

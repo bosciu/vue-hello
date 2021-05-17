@@ -6,9 +6,17 @@ var app = new Vue({
     el: "#root",
     data: {
         message: "Hello World!",
-        linkImage: "https://www.architetturaecosostenibile.it/images/stories/2016/promuoviamo-paesaggio-italiano.jpg"
+        linkImage: "https://www.architetturaecosostenibile.it/images/stories/2016/promuoviamo-paesaggio-italiano.jpg",
+        classColor: "red"
     },
     methods: {
-        prova: () => alert("Ciao")
+        saluta: () => alert("Ciao"),
+        cambiaColore: function() {
+            if (this.classColor == "red") {
+                this.classColor = "blue";
+            } else {
+                this.classColor = "red";
+            }
+        }
     }
 });
